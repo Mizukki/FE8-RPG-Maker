@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>/// Creates the grid
-global.map_grid = mp_grid_create(48,112,17,7,32,32); // (left,top) -&gt; start grid, (hcells,vcells) -&gt; taille grid, (cellwidth,cellheigth) -&gt; taille cellule
+global.map_grid = mp_grid_create(16,16,15,10,32,32); // (left,top) -&gt; start grid, (hcells,vcells) -&gt; taille grid, (cellwidth,cellheigth) -&gt; taille cellule
 global.navigate = path_add();
 
 

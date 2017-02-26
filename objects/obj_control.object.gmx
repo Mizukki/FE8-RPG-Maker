@@ -26,9 +26,9 @@
           <argument>
             <kind>1</kind>
             <string>/// Global variables
-
 global.state = states.p_turn;
 global.selected = noone; //get the id of the object we click on
+//global.enemy = noone;
 global.moving = false;
 global.attacking = false;
 
@@ -59,7 +59,7 @@ global.ai_activated = false;
             <kind>1</kind>
             <string>/// loop vars - check the entire grid
 
-row = 128;
+row = 32;
 </string>
           </argument>
         </arguments>
@@ -97,7 +97,7 @@ if (keyboard_check_pressed(ord("R")))
         pixel_dist = orig_pixel_dist;
         attacked = false;
     }
-    if (instance_number(par_ennemy)  &gt; 0) {global.state = states.ai_turn;}
+    if (instance_number(par_enemy)  &gt; 0) {global.state = states.ai_turn;}
 }
 </string>
           </argument>

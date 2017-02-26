@@ -27,24 +27,20 @@
             <kind>1</kind>
             <string>/// Variables
 
+image_speed = 0.1;
+type = 1; //melee
 attacked = false;
-
-type = 1;
-
-pixel_dist = 100;
+pixel_dist = 160;
 orig_pixel_dist = pixel_dist;
 
 pace = 2;
-
 cur_node_x = x;
 cur_node_y = y;
 
 idle_anim = spr_ephraim_idle;
 run_anim = spr_ephraim_run;
-melee_anim =spr_ephraim_attack;
+melee_anim = spr_ephraim_attack;
 death_anim = spr_death;
-
-image_speed = 0.1;
 </string>
           </argument>
         </arguments>
@@ -65,8 +61,7 @@ image_speed = 0.1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Stats
-
+            <string>///stats
 attack = 50 ;
 defence = 100;
 </string>
