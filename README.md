@@ -2,4 +2,6 @@
 
 Simple map to start with Game Maker Studio.
 
-Some issue with the dimensions
+Function attack and deplacement.
+
+
