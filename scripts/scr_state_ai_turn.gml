@@ -4,8 +4,8 @@ if (global.ai_selected == noone)
 {
     if (global.ai_activated == false)
     {
-        ai_active = instance_number(par_ennemy) - global.ai_id;
-        global.ai_selected = instance_find(par_ennemy, ai_active);
+        ai_active = instance_number(par_enemy) - global.ai_id;
+        global.ai_selected = instance_find(par_enemy, ai_active);
         
         scr_place_move_squares_ai();
         global.ai_activated = true;
@@ -33,7 +33,7 @@ with (global.ai_selected)
                 moved = true;
                 if (instance_exists(obj_attack_square_ai)) 
                 {
-                    global.ennemy = instance_position(nearest_attack.x, nearest_attack.y, par_player);
+                    global.enemy = instance_position(nearest_attack.x, nearest_attack.y, par_player);
                     scr_melee_attack_ai();
                 }
                 else {attacked = true;}
@@ -43,14 +43,14 @@ with (global.ai_selected)
                 
                 if (attacked == true && moved == true)
                 {
-                    global.ennemy = noone;
+                    global.enemy = noone;
                     global.ai_id += 1;
                     global.ai_selected = noone;
                     global.ai_activated = false;
                 }
             }
         }
-        else if (type == 2)
+        /*else if (type == 2)
         {
             if (acquired_targets == false)
             {
@@ -63,7 +63,7 @@ with (global.ai_selected)
             }
             if (instance_exists(obj_attack_square_ai))
             {
-                global.ennemy = instance_position(nearest_attack.x, nearest_attack.y, par_player);
+                global.enemy = instance_position(nearest_attack.x, nearest_attack.y, par_player);
                 sprite_index = ranged_anim;
                 moved = true;
                 scr_ranged_attack_ai();
@@ -86,22 +86,22 @@ with (global.ai_selected)
                 with (obj_move_square_ai) {instance_destroy();}
                 if (attacked == true && moved == true)
                 {
-                    global.ennemy = noone;
+                    global.enemy = noone;
                     global.ai_id += 1;
                     global.ai_selected = noone;
                     global.ai_activated = false;
                 }
             }
-        }
+        }*/
     }
 }
 
-if (global.ai_id > instance_number(par_ennemy))
+if (global.ai_id > instance_number(par_enemy))
 {
     global.state = states.p_turn;
     global.ai_selected = noone;
     global.ai_id = 1;
-    with (par_ennemy)
+    with (par_enemy)
     {
         attacked = false;
         moved = false;
